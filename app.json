@@ -24,7 +24,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "br.com.atextecnologia.atexmobeject",
+      "buildNumber": "1.0.0",
+      "icon": "./assets/imgs/icon-ios.png"
+    },
+    "android": {
+      "package": "br.com.atextecnologia.atexmobeject",
+      "versionCode": 100,
+      "icon": "./assets/imgs/icon-android.png"
     },
     "primaryColor": "#ededed",
     "androidStatusBarColor": "#1dacd6",
