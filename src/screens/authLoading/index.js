@@ -41,6 +41,7 @@ class AuthLoading extends Component {
       const pushToken = await registerForPushNotifications();
       this.props.userStateRequest();
     } catch (e) {
+      this.props.userStateRequest();
       this.setState({
         pushError: e
       })

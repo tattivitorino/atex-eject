@@ -23,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		2C1548D9E4CB1AEFA5CCAE6D /* Pods-atex-eject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atex-eject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-atex-eject/Pods-atex-eject.debug.xcconfig"; sourceTree = "<group>"; };
+		8CE58BD122EA653F007B85E0 /* atex-eject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "atex-eject.entitlements"; sourceTree = "<group>"; };
 		A47FE4D7F70906B7DC8CE39B /* Pods-atex-eject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-atex-eject.release.xcconfig"; path = "Pods/Target Support Files/Pods-atex-eject/Pods-atex-eject.release.xcconfig"; sourceTree = "<group>"; };
 		B501732A1DC01252003445D9 /* EXShell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EXShell.plist; sourceTree = "<group>"; };
 		B56386411DB9693800A0598C /* atex-eject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atex-eject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +92,7 @@
 		B56386431DB9693800A0598C /* atex-eject */ = {
 			isa = PBXGroup;
 			children = (
+				8CE58BD122EA653F007B85E0 /* atex-eject.entitlements */,
 				B56386471DB9693800A0598C /* AppDelegate.h */,
 				B56386481DB9693800A0598C /* AppDelegate.m */,
 				B56386501DB9693800A0598C /* Assets.xcassets */,
@@ -153,6 +155,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = P5V6HUAYF6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -392,6 +402,7 @@
 			baseConfigurationReference = 2C1548D9E4CB1AEFA5CCAE6D /* Pods-atex-eject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "atex-eject/atex-eject.entitlements";
 				DEVELOPMENT_TEAM = P5V6HUAYF6;
 				INFOPLIST_FILE = "$(SRCROOT)/atex-eject/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -406,6 +417,7 @@
 			baseConfigurationReference = A47FE4D7F70906B7DC8CE39B /* Pods-atex-eject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "atex-eject/atex-eject.entitlements";
 				DEVELOPMENT_TEAM = P5V6HUAYF6;
 				INFOPLIST_FILE = "$(SRCROOT)/atex-eject/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

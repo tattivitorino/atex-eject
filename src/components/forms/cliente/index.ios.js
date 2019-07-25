@@ -421,13 +421,13 @@ class ClienteForm extends Component {
           backgroundColor="#f4f4f4">
           <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
             <View style={{ flexDirection: 'row' }}>
-              <Button disabled={this.previousDisabled} transparent primary
+              <Button disabled={this.previousDisabled} primary transparent 
                 onPress={() => {
                   this.focusPrevious();
                 }}>
                 <Icon type="AntDesign" name="up" />
               </Button>
-              <Button disabled={this.nextDisabled} transparent primary
+              <Button disabled={this.nextDisabled} primary transparent 
                 onPress={() => {
                   this.focusNext();
                 }}>
@@ -435,7 +435,7 @@ class ClienteForm extends Component {
               </Button>
             </View>
             <View style={{ flexDirection: 'row' }}>
-              <Button transparent primary onPress={() => { Keyboard.dismiss(); }}>
+              <Button primary transparent onPress={() => { Keyboard.dismiss(); }}>
                 <Text>Fechar</Text>
               </Button>
             </View>
