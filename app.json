@@ -27,18 +27,28 @@
       "supportsTablet": true,
       "bundleIdentifier": "br.com.atextecnologia.atexmobeject",
       "buildNumber": "1.0.0",
-      "icon": "./assets/imgs/icon-ios.png"
+      "icon": "./assets/imgs/icon-ios.png",
+      "publishBundlePath": "ios/atex-eject/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/atex-eject/Supporting/shell-app-manifest.json"
     },
     "android": {
       "package": "br.com.atextecnologia.atexmobeject",
       "versionCode": 100,
-      "icon": "./assets/imgs/icon-android.png"
+      "icon": "./assets/imgs/icon-android.png",
+      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
+      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
     },
     "primaryColor": "#ededed",
     "androidStatusBarColor": "#1dacd6",
     "androidStatusBar": {
       "barStyle": "light-content",
       "backgroundColor": "#1dacd6"
-    }
+    },
+    "isDetached": true,
+    "detach": {
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.11.2-sdk33.0.0-76da9dd8-735b-43b3-9682-b386811f4e5f.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.11.4-sdk33.0.0-6a4f0f3e-1f1b-4c33-9155-d0237f6d7c34.tar.gz"
+    },
+    "scheme": "exp31cfab2c8e6948cfb91b62e4bf5a7c4e"
   }
 }
