@@ -179,7 +179,7 @@ const responseSuccess = response => {
 */
 
 const responseError = error => {
-  //console.log('ResponseInterceptor ERROR: ', JSON.stringify(error))
+  console.log('ResponseInterceptor ERROR: ', JSON.stringify(error))
 
   if (!error.response || !error.response.status) {
 

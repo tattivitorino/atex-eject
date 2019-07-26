@@ -63,7 +63,7 @@ const handleCredentials = async credentials => {
       exp
     }
   } catch (e) {
-    throw ('Erro ao tratar credenciais: ' + e);
+    throw ({ message: 'Erro ao tratar credenciais: ' + e });
   }
 }
 
@@ -190,6 +190,8 @@ export function* loginSaga({ data }) {
     NavigationService.navigate('App');
   }
   catch (e) {
+    console.log('LOGIN ERROR', e);
+
     //NavigationService.navigate('App');
     yield put(requestAuthError({
       message: e.message,

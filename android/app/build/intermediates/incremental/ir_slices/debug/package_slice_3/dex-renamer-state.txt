@@ -1,0 +1,4 @@
+#Fri Jul 26 09:52:25 BRT 2019
+base.0=/react/my-apps/atex-eject/android/app/build/intermediates/transforms/dexMerger/debug/3
+path.0=classes.dex
+renamed.0=classes.dex
