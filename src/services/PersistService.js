@@ -7,9 +7,11 @@
  */
 
 import * as SecureStore from 'expo-secure-store';
+import { AsyncStorage, Platform } from 'react-native';
 
 export const getStorageItem = (key) => {
-  SecureStore.getItemAsync(key)
+  let req = Platform.OS === 'ios' ? SecureStore.getItemAsync(key) : AsyncStorage.getItem(key);
+  req
     .then(res => {
       if (res) return Promise.resolve(res);
       return Promise.reject(false);
@@ -21,15 +23,19 @@ export const getStorageItem = (key) => {
 
 export const getStorageItemAsync = async (key) => {
   try {
-    const response = await SecureStore.getItemAsync(key);
+    let response;
+    if (Platform.OS === 'ios') response = await SecureStore.getItemAsync(key);
+    else response = await AsyncStorage.getItem(key);
     return response;
   } catch (e) {
+    //console.log('GET STORAGE ITEM ERROR: ', e);
     throw (e)
   }
 }
 
 export const setStorageItem = (key, value) => {
-  SecureStore.setItemAsync(key, value)
+  let req = Platform.OS === 'ios' ? SecureStore.setItemAsync(key, value) : AsyncStorage.setItem(key, value);
+  req
     .then(res => {
       return Promise.resolve(true);
     })
@@ -40,15 +46,19 @@ export const setStorageItem = (key, value) => {
 
 export const setStorageItemAsync = async (key, value) => {
   try {
-    const response = await SecureStore.setItemAsync(key, value);
+    let response;
+    if (Platform.OS === 'ios') response = await SecureStore.setItemAsync(key, value);
+    else response = await AsyncStorage.setItem(key, value);
     return response;
   } catch (e) {
+    //console.log('SET STORAGE ITEM ERROR: ', e);
     throw (e);
   }
 }
 
 export const deleteStorageItem = (key) => {
-  SecureStore.deleteItemAsync(key)
+  let req = Platform.OS === 'ios' ? SecureStore.deleteItemAsync(key) : AsyncStorage.removeItem(key);
+  req
     .then(res => {
       return Promise.resolve(true);
     })
@@ -59,7 +69,9 @@ export const deleteStorageItem = (key) => {
 
 export const deleteStorageItemAsync = async (key) => {
   try {
-    const response = await SecureStore.deleteItemAsync(key);
+    let response;
+    if (Platform.OS === 'ios') response = await SecureStore.deleteItemAsync(key);
+    else response = await AsyncStorage.removeItem(key);
     return response;
   } catch (e) {
     throw (e)

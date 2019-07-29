@@ -31,4 +31,6 @@ const simpleDevice = {
   version: Platform.OS === 'ios' ? Constants.platform.ios.systemVersion : Constants.systemVersion
 }
 
+//console.log(simpleDevice)
+
 export { device, simpleDevice };
